@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import CommandStart
 from aiogram.types import (
@@ -9,8 +10,7 @@ from aiogram.types import (
     CallbackQuery,
 )
 
-
-BOT_TOKEN = "8870486445:AAEcfROO1xxNTFaAomTd3kLIfqeeuzmhu84"   
+BOT_TOKEN = os.environ.get("8870486445:AAEcfROO1xxNTFaAomTd3kLIfqeeuzmhu84")  
 VPN_REF_LINK = "https://t.me/KrevetkaVpn666bot?start=71TDXL7V"
 
 
