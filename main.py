@@ -9,10 +9,10 @@ from aiogram.types import (
     CallbackQuery,
 )
 
-# ====== НАСТРОЙКИ ======
-BOT_TOKEN = "СЮДА_ВСТАВЬ_ТОКЕН_СВОЕГО_БОТА"   # получить у @BotFather
+
+BOT_TOKEN = "8870486445:AAEcfROO1xxNTFaAomTd3kLIfqeeuzmhu84"   
 VPN_REF_LINK = "https://t.me/KrevetkaVpn666bot?start=71TDXL7V"
-# =======================
+
 
 logging.basicConfig(level=logging.INFO)
 
@@ -22,8 +22,8 @@ dp = Dispatcher()
 
 def kb() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔐 Получить VPN", url=VPN_REF_LINK)],
-        [InlineKeyboardButton(text="✅ Я запустил VPN-бот", callback_data="done")],
+        [InlineKeyboardButton(text="🔐 Получить ускоритель интернета", url=VPN_REF_LINK)],
+        [InlineKeyboardButton(text="✅ Я запустил ускоритель интернета", callback_data="done")],
     ])
 
 
@@ -32,7 +32,7 @@ async def start(message: Message):
     name = message.from_user.first_name or "друг"
     await message.answer(
         f"👋 Привет, {name}!\n\n"
-        "🚀 Нажми кнопку ниже, чтобы получить доступ к VPN 👇\n\n"
+        "🚀 Нажми кнопку ниже, чтобы получить доступ к ускорителю 👇\n\n"
         "❗️ Важно: после перехода обязательно нажми <b>«Запустить»</b> в VPN-боте, "
         "иначе доступ не активируется.",
         reply_markup=kb(),
